@@ -1,7 +1,15 @@
 node {
     stage('Example') {
-        sh 'echo name is ?' + env.BRANCH_NAME
-        if (env.BRANCH_NAME == 'master') {
+        def branchName = getCurrentBranch()
+        echo 'My branch is' + branchName
+
+        def getCurrentBranch () {
+            return sh (
+                script: 'git rev-parse --abbrev-ref HEAD',
+                returnStdout: true
+            ).trim()
+        }
+        if (branchName == 'master') {
             echo 'I only execute on the master branch'
         } else {
             echo 'I execute develop'
