@@ -1,16 +1,9 @@
-pipeline {
-    agent none
-    
-    stages {
-        stage('example build') {
-            steps {
-                echo 'here is develop branch'
-            }
-        }
-    }
-    post {
-        always {
-            echo 'post process !'
+node {
+    stage('Example') {
+        if (env.BRANCH_NAME == 'master') {
+            echo 'I only execute on the master branch'
+        } else {
+            echo 'I execute develop'
         }
     }
 }
