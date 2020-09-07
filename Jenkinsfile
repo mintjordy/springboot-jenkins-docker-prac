@@ -5,6 +5,8 @@ pipeline {
         stage('example build') {
             steps {
                 echo 'jenkins sample build ! ${AUTHOR}'
+                echo 'jenkins sample build ! ${AUTHOR}'
+                echo 'sample'
             }
         }
     }
