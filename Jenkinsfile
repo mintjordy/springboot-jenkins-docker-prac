@@ -21,11 +21,11 @@ node {
     })
 
     stage("Parameter Check", {
-        println " BUILD_USER = $BUILD_USER"
-        println " CONFIG_NAME = $CONFIG_NAME"
-        println " REMOTE_PATH = $REMOTE_PATH"
-        println " TARGET_USER = $TARGET_USER"
-        println " TARGET_SERVER = $TARGET_SERVER"
+        //println " BUILD_USER = $BUILD_USER"
+        //println " CONFIG_NAME = $CONFIG_NAME"
+        //println " REMOTE_PATH = $REMOTE_PATH"
+        //println " TARGET_USER = $TARGET_USER"
+       // println " TARGET_SERVER = $TARGET_SERVER"
         println " GIT_URL = $GIT_URL"
         println " BRANCH_SELECTOR = $BRANCH_SELECTOR"
         println " GRADLE_VERSION = $GRADLE_VERSION"
